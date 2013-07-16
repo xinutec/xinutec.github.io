@@ -75,18 +75,18 @@ both permissive and copyleft licenses, whether or not such licenses are
 subsequently disapproved (including any right to adopt any future version of a
 license if permitted).
 
-### 2.4 Moral Rights.
+### 2.4 Moral Rights
 
 If moral rights apply to the Contribution, to the maximum extent permitted by
 law, You waive and agree not to assert such moral rights against Us or our
 successors in interest, or any of our licensees, either direct or indirect.
 
-### 2.5 Our Rights.
+### 2.5 Our Rights
 
 You acknowledge that We are not obligated to use Your Contribution as part of
 the Material and may decide to include any Contribution We consider appropriate.
 
-### 2.6 Reservation of Rights.
+### 2.6 Reservation of Rights
 
 Any rights not expressly licensed under this section are expressly reserved by
 You.
@@ -128,7 +128,7 @@ OTHERWISE) UPON WHICH THE CLAIM IS BASED.
 
 ## 6. Miscellaneous
 
-### 6.1 Legislation.
+### 6.1 Legislation
 
 This Agreement will be governed by and construed in accordance with the laws of
 Germany excluding its conflicts of law provisions. Under certain circumstances,
@@ -138,18 +138,18 @@ and the parties intend to avoid the application of the UN Convention to this
 Agreement and, thus, exclude the application of the UN Convention in its
 entirety to this Agreement.
 
-### 6.2 Other agreements.
+### 6.2 Other agreements
 
 This Agreement sets out the entire agreement between You and Us for Your
 Contributions to Us and overrides all other agreements or understandings.
 
-### 6.3 Third parties.
+### 6.3 Third parties
 
 If You or We assign the rights or obligations received through this Agreement to
 a third party, as a condition of the assignment, that third party must agree in
 writing to abide by all the rights and obligations in the Agreement.
 
-### 6.4 Failure of performance.
+### 6.4 Failure of performance
 
 The failure of either party to require performance by the other party of any
 provision of this Agreement in one situation shall not affect the right of a
@@ -158,7 +158,7 @@ performance under a provision in one situation shall not be considered a waiver
 of the performance of the provision in the future or a waiver of the provision
 in its entirety.
 
-### 6.5 Enforcability.
+### 6.5 Enforcability
 
 If any provision of this Agreement is found void and unenforceable, such
 provision will be replaced to the extent possible with a provision that comes
