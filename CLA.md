@@ -3,9 +3,8 @@ Thank you for your interest in contributing to this project ("We" or "Us").
 This contributor agreement ("Agreement") documents the rights granted by
 contributors to Us. To make this document effective, please sign it
 electronically by following the instructions on the contribution page of our
-website.  This is a legally binding document, so please read it carefully before
-agreeing to it.  The Agreement may cover more than one software project managed
-by Us.
+website. This is a legally binding document, so please read it carefully
+before agreeing to it.
 
 ## 1. Definitions
 
