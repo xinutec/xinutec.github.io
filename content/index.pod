@@ -1,0 +1,41 @@
+=head1 Home
+
+Xinutec isn't a topical network, but most of us are huge geeks and technology
+fans.  We don't bite and fresh meat is always welcome. Happy chatting!
+
+=head2 Connecting to Xinutec
+
+Please use the round robin DNS on L<irc.xinutec.org|irc://irc.xinutec.org>.
+IPv6 connectivity is currently only offered by
+L<irc.barfooze.de|irc://irc.barfooze.de>.  Use Port 6667 for normal connections,
+and Port 7776 for SSL.  Web-based access to the network is available
+L<here|http://qwebirc.xinutec.net/> via IPv4.
+
+=head2 Channels
+
+C<#linux> is the main channel.  If you run a channel, you are free to host a
+channel homepage (static HTML only) on this server.
+
+=head2 People
+
+These are the network operators/staff (effective or retired) with links to their homepages:
+
+=over
+
+=item L<pippijn|http://xinutec.org/~pippijn>
+
+=item L<ente|http://barfooze.de/>
+
+=item L<maito|http://maito.name/>
+
+=item L<phryk|http://phryk.net/>
+
+=item L<Palo|http://des-grauens.de/>
+
+=back
+
+Additionally, these non-staff people have requested that a link to their
+homepage should be added to this page: None yet.
+
+People with an affiliation (i.e. regulars) to the network can also host a user
+page on this server, similar to a channel page.

@@ -1,0 +1,5 @@
+=head1 Contributing
+
+Contributing to Xinutec software requires you to sign a Contributor License
+Agreement. Please L<contact us|mailto:contrib@xinutec.org> if the legislation in
+your country does not permit such agreements.
