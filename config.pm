@@ -8,6 +8,7 @@
 		[rules => "Rules"],
 		[dev => "Software", [
 			[contributing => "Contributing"],
+			[cla => "CLA"],
 		]],
 	],
 }
