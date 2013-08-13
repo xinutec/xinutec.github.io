@@ -5,6 +5,7 @@
 
 	menubar => [
 		["Home"],
+		[rules => "Rules"],
 		[dev => "Software", [
 			[contributing => "Contributing"],
 		]],
