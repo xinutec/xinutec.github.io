@@ -1,5 +1,47 @@
 =head1 Contributing
 
 Contributing to Xinutec software requires you to sign a Contributor License
-Agreement. Please L<contact us|mailto:contrib@xinutec.org> if the legislation in
-your country does not permit such agreements.
+Agreement. Signing the CLA is done by sending an E-Mail to C<contrib> at
+C<xinutec.org>. In your E-Mail, you need to provide the following information:
+
+=over
+
+=item Full name
+
+=item Country
+
+=back
+
+You may optionally provide additional contact information. If your contributions
+will be provided from GitHub repositories, your E-Mail should include the GitHub
+username.
+
+You must attach the L<CLA text|cla.txt> with your E-Mail. If you have a digital
+certificate or PGP key, please use it to sign the mail, including the attached
+text. It is important to send the text along with your signature, as it may
+change in the future, but your signature will not apply to any future versions
+of the CLA. You will be contacted if a change in the agreement is relevant to
+you.
+
+Please contact us at C<contrib> at C<xinutec.org> if the legislation in your
+country does not permit such agreements.
+
+
+=head2 Data Privacy Statement
+
+Xinutec Research Labs will use the information given in your agreement for
+contacting you in case of questions regarding your contributions. The
+information you give us will be kept confidential and your personal information
+will not be disclosed to third parties without your prior consent except where
+necessary to confirm factual information provided by you. Access to sensitive
+personal data is strictly controlled and confined to staff with responsibilities
+in these areas.
+
+
+=head2 Correctness Declaration
+
+When you submit a signed CLA, you accept the following statement:
+
+I confirm that to the best of my knowledge the information I have provided in my
+agreement is correct and true. I realise that if I have deliberately given false
+or misleading information, all my rights to my contributions will be waived.
