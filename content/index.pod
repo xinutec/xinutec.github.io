@@ -14,7 +14,10 @@ L<here|http://qwebirc.xinutec.net/> via IPv4.
 =head2 Channels
 
 C<#linux> is the main channel.  If you run a channel, you are free to host a
-channel homepage (static HTML only) on this server.
+channel homepage (static HTML only) on this server. To do this, simply fork our
+L<github repository|https://github.com/xinutec/xinutec.github.io/> and create a
+pull request once your changes are is in place. A staff member will then review
+and approve it.
 
 =head2 People
 
