@@ -7,9 +7,10 @@ fans.  We don't bite and fresh meat is always welcome. Happy chatting!
 
 Please use the round robin DNS on L<irc.xinutec.org|irc://irc.xinutec.org>.
 IPv6 connectivity is currently only offered by
+L<irc.xinutec.net|irc://irc.xinutec.net> and
 L<irc.barfooze.de|irc://irc.barfooze.de>.  Use Port 6667 for normal connections,
-and Port 7776 for SSL.  Web-based access to the network is available
-L<here|http://qwebirc.xinutec.net/> via IPv4.
+and Port 7776 for SSL. Web-based access to the network is available with
+L<qwebirc|http://qwebirc.xinutec.net/> via IPv4.
 
 =head2 Channels
 
@@ -21,7 +22,8 @@ and approve it.
 
 =head2 People
 
-These are the network operators/staff (effective or retired) with links to their homepages:
+These are the network operators/staff (effective or retired) with links to their
+homepages:
 
 =over
 
