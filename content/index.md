@@ -28,11 +28,11 @@ People
 These are the network operators/staff (effective or retired) with links to
 their homepages:
 
-- [pippijn](http://xinutec.org/~pippijn)
 - [ente](http://barfooze.de/)
 - [maito](http://maito.name/)
-- [phryk](http://phryk.net/)
 - [Palo](http://des-grauens.de/)
+- [phryk](http://phryk.net/)
+- [pippijn](http://xinutec.org/~pippijn)
 
 Additionally, these non-staff people have requested that a link to their
 homepage should be added to this page: None yet.
