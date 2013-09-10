@@ -1,20 +1,19 @@
 =head1 Home
 
 Xinutec isn't a topical network, but most of us are huge geeks and technology
-fans.  We don't bite and fresh meat is always welcome. Happy chatting!
+fans. We don't bite and fresh meat is always welcome. Happy chatting!
 
 =head2 Connecting to Xinutec
 
-Please use the round robin DNS on L<irc.xinutec.org|irc://irc.xinutec.org>.
-IPv6 connectivity is currently only offered by
-L<irc.xinutec.net|irc://irc.xinutec.net> and
-L<irc.barfooze.de|irc://irc.barfooze.de>.  Use Port 6667 for normal connections,
-and Port 7776 for SSL. Web-based access to the network is available with
+Please use the round robin DNS on L<irc.xinutec.net|irc://irc.xinutec.net>.
+IPv6 is also supported via this host name. We currently still support
+unencrypted connections via port 6667, but will soon only allow SSL connections
+via port 7776. Web-based access to the network is available with
 L<qwebirc|http://qwebirc.xinutec.net/> via IPv4.
 
 =head2 Channels
 
-C<#linux> is the main channel.  If you run a channel, you are free to host a
+C<#linux> is the main channel. If you run a channel, you are free to host a
 channel homepage (static HTML only) on this server. To do this, simply fork our
 L<github repository|https://github.com/xinutec/xinutec.github.io/> and create a
 pull request once your changes are is in place. A staff member will then review
