@@ -10,7 +10,7 @@ Connecting to Xinutec
 Please use the round robin DNS on [irc.xinutec.net](irc://irc.xinutec.net).
 IPv6 is also supported via this host name. We currently still support
 unencrypted connections via port 6667, but will soon only allow SSL
-connections via port 7776. Web-based access to the network is available with
+connections via port 6697. Web-based access to the network is available with
 [qwebirc](http://qwebirc.xinutec.net/) via IPv4.
 
 Channels
