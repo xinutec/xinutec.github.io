@@ -31,8 +31,25 @@ We understand that some people may want to remain anonymous, so the use of
 real names is not required on the Xinutec IRC network. Authentication is not
 orthogonal to anonymity, and as such, we provide full support for client
 certificates. You can set an auto-op mode on a channel with `+w o:z:$SHA`
-where `$SHA` is the SHA-1 fingerprint of a given client certificate. It may
-also be used to auto-voice certain clients with `+w v:z:$SHA`.
+where `$SHA` is the SHA-1 fingerprint of a given client certificate which can
+be obtained by issuing `/whois` on a user. If there is no fingerprint listed
+there, it means the user isn't connected using a client certificate. This way,
+you can also check whether your client certificate works for yourself). It may
+also be used to auto-voice certain clients with `+w v:z:$SHA`. Please note that
+the "z" type reop ignores everything after a `#` character, so you can affix a
+comment to it, e.g. `+w v:z:$SHA#Peter`, if Peter is the person who owns this
+nick. SHA-1 fingerprints take the form of 40 character hexadecimal numbers,
+i.e. 40 characters between 0-9 and A-F.
+
+Registering your channel
+------------------------
+
+While we do not provide nickname and channel as registration service packages
+as most other networks do, users can set channel mode `+P` which makes modes on
+the channel permanent. Combined with the auto-op mentioned above, this provides
+you with an advanced and cryptographically secure way of regaining your channel
+after a disconnect. If you want to unregister a channel, simply remove mode
+`-P` again.
 
 Off-the-record messaging
 ------------------------
