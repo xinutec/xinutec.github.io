@@ -1,6 +1,6 @@
 =head1 Software development
 
-The Xinutec community develops open source software used to provice services to
+The Xinutec community develops open source software used to provide services to
 its members and guests. We maintain a fork of the Internet Relay Chat server
 L<InspIRCd|http://www.inspircd.org/> in our git repository at
 L<GitHub|https://github.com/xinutec/inspircd>. In addition, we forked the
