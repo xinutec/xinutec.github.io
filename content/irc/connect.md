@@ -17,15 +17,19 @@ with the following command:
 /network add xinutec
 ```
 
-Without client certificate, follow these instructions:
+Without client certificate, enter this command, all on one line:
 
 ```
-/server add -ssl_cafile ~/.irssi/xinutec.pem -auto -network xinutec irc.xinutec.net
+/server add -ssl_cafile ~/.irssi/xinutec.pem
+            -auto -network xinutec irc.xinutec.net
 ```
 
 In case you do have a client certificate with associated private key, save
-them both in `~/.irssi/client.pem` and use the following command:
+them both in `~/.irssi/client.pem` and use the following command, again all on
+one line:
 
 ```
-/server add -ssl_cafile ~/.irssi/xinutec.pem -ssl_cert ~/.irssi/client.pem -auto -network xinutec irc.xinutec.net
+/server add -ssl_cafile ~/.irssi/xinutec.pem
+            -ssl_cert ~/.irssi/client.pem
+            -auto -network xinutec irc.xinutec.net
 ```
