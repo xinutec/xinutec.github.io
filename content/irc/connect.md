@@ -35,8 +35,9 @@ one line:
 ```
 
 In case you already registered the network and server in your client, you can
-either remove the server and re-add it as above, or manually edit the
-configuration file, so that it contains a section like this:
+either remove the server with `/server remove irc.xinutec.net` and re-add it
+as above, or manually edit the configuration file, so that it contains a
+section like this:
 
 ```
   {
