@@ -57,19 +57,19 @@ to contact our staff.
   <code>~/.irssi/xinutec.pem</code>. Then, add the Xinutec network to your configuration
 with the following command:
 
-  <pre class="code-block">
+  <pre>
   /network add xinutec
   </pre>
 Without client certificate, follow these instructions:
 
-  <pre class="code-block">
+  <pre>
   /server add -ssl_cafile ~/.irssi/xinutec.pem -auto -network xinutec irc.xinutec.net
   </pre>
 In case you do have a client certificate with associated private key, save
 them both in 
   <code>~/.irssi/client.pem</code> and use the following command:
 
-  <pre class="code-block">
+  <pre>
   /server add -ssl_cafile ~/.irssi/xinutec.pem -ssl_cert ~/.irssi/client.pem -auto -network xinutec irc.xinutec.net
   </pre>
 
