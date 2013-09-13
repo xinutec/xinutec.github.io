@@ -8,9 +8,9 @@ Connecting to Xinutec
 ---------------------
 
 You are welcome to connect to our network using the round robin DNS name
-[irc.xinutec.net](ircs://irc.xinutec.net:6697/#linux). IPv6 is supported on
+[irc.xinutec.net](ircs://irc.xinutec.net:6697/linux). IPv6 is supported on
 most servers, and the DNS will resolve to the right address record. We
-currently still allow [plain text](irc://irc.xinutec.net/#linux) connections
+currently still allow [plain text](irc://irc.xinutec.net/linux) connections
 via port 6667, but will soon only allow SSL secured connections via port 6697.
 We provide web-based access to the network is with our self-hosted
 [qwebirc](http://qwebirc.xinutec.net/) via IPv4. It is also possible to
