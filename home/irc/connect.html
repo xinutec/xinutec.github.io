@@ -67,8 +67,11 @@ one line:
 </p> <pre>/server add -ssl_cafile ~/.irssi/xinutec.pem
             -ssl_cert ~/.irssi/client.pem
             -auto -network xinutec irc.xinutec.net</pre> <p>In case you already registered the network and server in your client, you can
-either remove the server and re-add it as above, or manually edit the
-configuration file, so that it contains a section like this:
+either remove the server with 
+  <code>/server remove irc.xinutec.net</code> and re-add it
+as above, or manually edit the configuration file, so that it contains a
+section like this:
+
 </p> <pre>  {
     address = "irc.xinutec.net";
     chatnet = "xinutec";
@@ -76,12 +79,55 @@ configuration file, so that it contains a section like this:
     ssl_cert = "~/.irssi/client.pem";
     ssl_cafile = "~/.irssi/xinutec.pem";
     autoconnect = "yes";
-  },</pre>
+  },</pre> <h3>Common to purple based clients
+</h3> <p>Pidgin, Empathy and other libpurple based clients store the CA certificates in
+a common place.
+</p> <p>Our Xinutec 
+  <a href="ca.crt">CA certificate</a> should be saved in the global CA store.
+Save it as 
+  <code>Xinutec\_CA.pem</code> under 
+  <code>/usr/share/purple/ca-certs</code> (or
+
+  <code>/usr/local/share/purple/ca-certs</code> as appropriate. Under Windows, save it
+under 
+  <code>C:\Program Files\Pidgin\ca-certs</code> (or 
+  <code>C:\Program Files
+  (x86)\Pidgin\ca-certs</code> as appropriate).
+
+</p> <h3>Pidgin
+</h3> <p>Refer to the above section about purple clients for the CA certificate.
+</p> <p>Next, add the IRC server to your client:
+</p> <p>
+  <img alt="Manage Accounts" src="pidgin/step1.png" />
+
+</p> <p>Click "Add" in the "Manage Accounts" dialog and enter the following
+information in the Basic tab:
+</p> <p>
+  <img alt="Add Account" src="pidgin/step2.png" />
+
+</p> <p>Now, we need to tell Pidgin that we want to have an encrypted connection. Make
+sure you change the port number to 6697 and check the SSL checkbox.
+</p> <p>
+  <img src="pidgin/step3.png" alt="SSL Settings" />
+
+</p> <p>If you get the following message box, the installation of our CA certificate
+went wrong.
+</p> <p>
+  <img alt="Invalid Certificate" src="pidgin/step4.png" />
+
+</p> <p>In that case, click "View Certificate", which will bring this information
+window:
+</p> <p>
+  <img src="pidgin/step5.png" alt="Invalid Certificate" />
+
+</p> <p>Copy the information and then click OK and accept and contact a staff member
+to help solve the problem.
+</p>
 		</div> 
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Pippijn van Steenhoven</a></div> 
-			<div id="updated">Last updated Fri Sep 13 04:30:18 MEST 2013</div> 
+			<div id="updated">Last updated Fri Sep 13 05:03:13 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 
