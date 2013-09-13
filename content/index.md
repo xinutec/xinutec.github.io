@@ -7,20 +7,12 @@ fans. We don't bite and fresh meat is always welcome. Happy chatting!
 Connecting to Xinutec
 ---------------------
 
-Please use the round robin DNS on [irc.xinutec.net](irc://irc.xinutec.net).
-IPv6 is also supported via this host name. We currently still support
-unencrypted connections via port 6667, but will soon only allow SSL
-connections via port 6697. Web-based access to the network is available with
-[qwebirc](http://qwebirc.xinutec.net/) via IPv4.
-
-Each of our servers is equipped with a certificate issued by the Xinutec IRC
-Certificate Authority. We recommend downloading and installing the authority's
-[CA certificate](irc/ca.crt) to verify the server's identity. If your client
-supports CRLs (certificate revocation lists), you may additionally link it to
-the [CRL](irc/crl.pem). In general, you would not download the CRL, as it can
-change. The CA certificate, on the other hand, *should* be downloaded, as it
-may never change. If it does, that means it was compromised. If this happens
-to you, please contact one of our administrators as soon as possible.
+You are welcome to connect to our network using the round robin DNS name
+[irc.xinutec.net](irc://irc.xinutec.net). IPv6 is supported on most servers.
+We currently still allow plain text connections via port 6667, but will soon
+only allow SSL secured connections via port 6697. Web-based access to the
+network is available with [qwebirc](http://qwebirc.xinutec.net/) via IPv4.
+See the page on [IRC](irc) for more information.
 
 Channels
 --------

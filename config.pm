@@ -5,7 +5,9 @@
 
 	menubar => [
 		["Home"],
-		[rules => "Rules"],
+		[irc => "IRC", [
+			[rules => "Rules"],
+		]],
 		[dev => "Software", [
 			[contributing => "Contributing"],
 			[cla => "CLA"],
