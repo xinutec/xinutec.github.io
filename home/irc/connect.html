@@ -66,12 +66,22 @@ one line:
 
 </p> <pre>/server add -ssl_cafile ~/.irssi/xinutec.pem
             -ssl_cert ~/.irssi/client.pem
-            -auto -network xinutec irc.xinutec.net</pre>
+            -auto -network xinutec irc.xinutec.net</pre> <p>In case you already registered the network and server in your client, you can
+either remove the server and re-add it as above, or manually edit the
+configuration file, so that it contains a section like this:
+</p> <pre>  {
+    address = "irc.xinutec.net";
+    chatnet = "xinutec";
+    port = "6697";
+    ssl_cert = "~/.irssi/client.pem";
+    ssl_cafile = "~/.irssi/xinutec.pem";
+    autoconnect = "yes";
+  },</pre>
 		</div> 
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Pippijn van Steenhoven</a></div> 
-			<div id="updated">Last updated Fri Sep 13 04:26:02 MEST 2013</div> 
+			<div id="updated">Last updated Fri Sep 13 04:30:18 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 

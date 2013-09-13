@@ -33,3 +33,18 @@ one line:
             -ssl_cert ~/.irssi/client.pem
             -auto -network xinutec irc.xinutec.net
 ```
+
+In case you already registered the network and server in your client, you can
+either remove the server and re-add it as above, or manually edit the
+configuration file, so that it contains a section like this:
+
+```
+  {
+    address = "irc.xinutec.net";
+    chatnet = "xinutec";
+    port = "6697";
+    ssl_cert = "~/.irssi/client.pem";
+    ssl_cafile = "~/.irssi/xinutec.pem";
+    autoconnect = "yes";
+  },
+```
