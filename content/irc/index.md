@@ -2,7 +2,15 @@ Internet Relay Chat
 ===================
 
 We are very concerned with privacy, not for any dubious reasons, but simply
-because we feel the need to protect our freedom of speech.
+because we feel the need to protect our freedom of speech. It should be
+obvious, but let's state it explicitly:
+
+- our servers do not log any user messages
+- we do not provide logger bots or host channel logs
+
+We also do not endorse other people doing so. We do provide a publicly
+accessible [quotes](http://quotes.xinutec.net) database, but a quote may only
+be added with consent of all people involved.
 
 SSL
 ---
@@ -20,4 +28,16 @@ Anonymity and authentication
 ----------------------------
 
 We understand that some people may want to remain anonymous, so the use of
-real names is not required on the Xinutec IRC network.
+real names is not required on the Xinutec IRC network. Authentication is not
+orthogonal to anonymity, and as such, we provide full support for client
+certificates. You can set an auto-op mode on a channel with `+w o:z:$SHA`
+where `$SHA` is the SHA-1 fingerprint of a given client certificate. It may
+also be used to auto-voice certain clients with `+w v:z:$SHA`.
+
+Off-the-record messaging
+------------------------
+
+In case you are concerned that an attacker may compromise one of our servers
+and record pre-encryption traffic (since servers must decrypt traffic before
+re-encrypting it with the recipient's session key), we recommend establishing
+end-to-end encryption with [OTR](http://www.cypherpunks.ca/otr/).

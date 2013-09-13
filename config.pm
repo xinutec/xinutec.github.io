@@ -6,6 +6,7 @@
 	menubar => [
 		["Home"],
 		[irc => "IRC", [
+			[connect => "Connecting"],
 			[rules => "Rules"],
 		]],
 		[dev => "Software", [

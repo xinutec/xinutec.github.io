@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+	<head> 
+		<title>Xinutec - Irc / Connect</title> 
+		<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/> 
+		<meta http-equiv="content-style-type" content="text/css"/> 
+		<meta name="description" content="Xinutec Network - Irc / Connect"/> 
+		<link rel="stylesheet" href="/home/css/home.css" type="text/css" title="Clean Blue" media="screen"/> 
+		<link rel="icon" type="image/x-icon" href="/home/favicon.ico"/>
+	</head> 
+
+	<body> 
+		<div id="header"> 
+			<h1>Xinutec Network</h1> 
+			<p id="slogan">Xinutec's place on the web</p> 
+		</div> 
+
+		<div id="sidebar"> 
+			<h2>Menu</h2> 
+			<div id="menubar">
+				<ul>
+  <li>
+    <a href="/home/">Home</a>
+  </li>
+  <li>
+    <a href="/home/irc">IRC
+      <span class="small">[-]</span>
+    </a>
+    <ul>
+      <li>
+        <a id="actmenu">Connecting</a>
+      </li>
+      <li>
+        <a href="/home/irc/rules">Rules</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/home/dev">Software
+      <span class="small">[+]</span>
+    </a>
+  </li>
+</ul>
+			</div> 
+		</div> 
+
+		<div id="content">
+			<h2>Connecting to IRC
+</h2> <p>This page provides short explanations on how to add the Xinutec IRC Network to
+your IRC client and how to connect to it. If your client is not listed here,
+but you would like to add a short how-to, perhaps with screenshots, feel free
+to contact our staff.
+</p> <h3>Irssi
+</h3> <p>First, download the 
+  <a href="ca.crt">CA certificate</a>. Save this under
+
+  <code>~/.irssi/xinutec.pem</code>. Then, add the Xinutec network to your configuration
+with the following command:
+
+  <pre>
+  /network add xinutec
+  </pre>
+Without client certificate, follow these instructions:
+
+  <pre>
+  /server add -ssl_cafile ~/.irssi/xinutec.pem -auto -network xinutec irc.xinutec.net
+  </pre>
+In case you do have a client certificate with associated private key, save
+them both in 
+  <code>~/.irssi/client.pem</code> and use the following command:
+
+  <pre>
+  /server add -ssl_cafile ~/.irssi/xinutec.pem -ssl_cert ~/.irssi/client.pem -auto -network xinutec irc.xinutec.net
+  </pre>
+
+</p>
+		</div> 
+
+		<div id="footer"> 
+			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Pippijn van Steenhoven</a></div> 
+			<div id="updated">Last updated Fri Sep 13 04:16:19 MEST 2013</div> 
+		</div> 
+	</body> 
+</html> 

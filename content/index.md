@@ -35,8 +35,10 @@ their homepages:
 - [phryk](http://phryk.net/)
 - [pippijn](http://xinutec.org/~pippijn)
 
-Additionally, these non-staff people have requested that a link to their
-homepage should be added to this page: None yet.
+Additionally, we like to link to the homepages of some permanent non-staff
+members here:
+
+- [McManiaC](https://nils.cc/)
 
 People with an affiliation (i.e. regulars) to the network can also host a user
 page on this server, similar to a channel page.

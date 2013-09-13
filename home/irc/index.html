@@ -28,6 +28,9 @@
     </a>
     <ul>
       <li>
+        <a href="/home/irc/connect">Connecting</a>
+      </li>
+      <li>
         <a href="/home/irc/rules">Rules</a>
       </li>
     </ul>
@@ -44,7 +47,18 @@
 		<div id="content">
 			<h2>Internet Relay Chat
 </h2> <p>We are very concerned with privacy, not for any dubious reasons, but simply
-because we feel the need to protect our freedom of speech.
+because we feel the need to protect our freedom of speech. It should be
+obvious, but let's state it explicitly:
+</p> <ul>
+  <li>our servers do not log any user messages
+  </li>
+  <li>we do not provide logger bots or host channel logs
+  </li>
+</ul> <p>We also do not endorse other people doing so. We do provide a publicly
+accessible 
+  <a href="http://quotes.xinutec.net">quotes</a> database, but a quote may only
+be added with consent of all people involved.
+
 </p> <h3>SSL
 </h3> <p>Each of our servers is equipped with a certificate issued by the Xinutec IRC
 Certificate Authority. We recommend downloading and installing the authority's
@@ -60,13 +74,28 @@ to you, please contact one of our administrators as soon as possible.
 
 </p> <h3>Anonymity and authentication
 </h3> <p>We understand that some people may want to remain anonymous, so the use of
-real names is not required on the Xinutec IRC network.
+real names is not required on the Xinutec IRC network. Authentication is not
+orthogonal to anonymity, and as such, we provide full support for client
+certificates. You can set an auto-op mode on a channel with 
+  <code>+w o:z:$SHA</code>
+where 
+  <code>$SHA</code> is the SHA-1 fingerprint of a given client certificate. It may
+also be used to auto-voice certain clients with 
+  <code>+w v:z:$SHA</code>.
+
+</p> <h3>Off-the-record messaging
+</h3> <p>In case you are concerned that an attacker may compromise one of our servers
+and record pre-encryption traffic (since servers must decrypt traffic before
+re-encrypting it with the recipient's session key), we recommend establishing
+end-to-end encryption with 
+  <a href="http://www.cypherpunks.ca/otr/">OTR</a>.
+
 </p>
 		</div> 
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Pippijn van Steenhoven</a></div> 
-			<div id="updated">Last updated Fri Sep 13 03:42:24 MEST 2013</div> 
+			<div id="updated">Last updated Fri Sep 13 04:03:36 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 
