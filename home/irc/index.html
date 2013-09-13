@@ -79,9 +79,31 @@ orthogonal to anonymity, and as such, we provide full support for client
 certificates. You can set an auto-op mode on a channel with 
   <code>+w o:z:$SHA</code>
 where 
-  <code>$SHA</code> is the SHA-1 fingerprint of a given client certificate. It may
-also be used to auto-voice certain clients with 
-  <code>+w v:z:$SHA</code>.
+  <code>$SHA</code> is the SHA-1 fingerprint of a given client certificate which can
+be obtained by issuing 
+  <code>/whois</code> on a user. If there is no fingerprint listed
+there, it means the user isn't connected using a client certificate. This way,
+you can also check whether your client certificate works for yourself.
+
+</p> <p>It may also be used to auto-voice certain clients with 
+  <code>+w v:z:$SHA</code>. Please
+note that the "z" type reop ignores everything after a 
+  <code>#</code> character, so you
+can affix a comment to it, e.g. 
+  <code>+w v:z:$SHA#Peter</code>, if Peter is the person
+who owns the certificate belonging to this hash. SHA-1 fingerprints take the
+form of 40 character hexadecimal numbers, i.e. 40 characters between 0-9 and
+A-F.
+
+</p> <h3>Registering your channel
+</h3> <p>While we do not provide nickname and channel as registration service packages
+as most other networks do, users can set channel mode 
+  <code>+P</code> which makes modes
+and the topic on the channel permanent. Combined with the auto-op mentioned
+above, this provides you with an advanced and cryptographically secure way of
+regaining your channel after a disconnect. If you want to unregister a
+channel, simply remove mode 
+  <code>-P</code> again.
 
 </p> <h3>Off-the-record messaging
 </h3> <p>In case you are concerned that an attacker may compromise one of our servers
@@ -95,7 +117,7 @@ end-to-end encryption with
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Pippijn van Steenhoven</a></div> 
-			<div id="updated">Last updated Fri Sep 13 04:03:36 MEST 2013</div> 
+			<div id="updated">Last updated Fri Sep 13 09:31:00 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 
