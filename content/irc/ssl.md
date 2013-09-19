@@ -58,8 +58,8 @@ While you're at it, you should also place our CA certificate next to it:
 
 	$ wget -O ~/.irssi/xinutec-ca.crt http://xinutec.net/home/irc/ca.crt
 
-If you want, you can verify the certificate's fingerprint now by checking the
-output of the following command:
+If you want, you can verify the CA certificate's fingerprint now by checking
+the output of the following command:
 
 	$ openssl x509 -noout -in ~/.irssi/xinutec-ca.crt -fingerprint -sha1 
 	SHA1 Fingerprint=65:79:0D:72:C7:5B:81:11:9F:71:2B:AD:93:79:58:EA:2A:18:93:11
@@ -72,6 +72,20 @@ Now place combined.pem in ~/.irssi and execute the following commands in irssi:
 
 	/network add Xinutec
 	/server add -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697
+
+You can also find out about your own certificate's fingerprint by the same
+command mentioned above:
+
+	$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1
+	SHA1 Fingerprint=08:47:D4:2C:2C:26:6B:B9:FA:AF:F5:53:20:C5:A4:53:A7:1F:AC:43
+
+Please note that you need to strip all colons from this value to format it in a
+way the IRC server can use it for features like auto-op:
+
+	$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1 | sed 's/.*=//;s/://g'
+	0847D42C2C266BB9FAAFF55320C5A453A71FAC43
+
+This way you can easily copy-paste it whenever you need it.
 
 ## eggdrop
 
