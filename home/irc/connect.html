@@ -66,33 +66,29 @@ to contact our staff.
   <code>~/.irssi/xinutec.pem</code>. Then, add the Xinutec network to your configuration
 with the following command:
 
-</p> <pre class="verbatim">    /network add xinutec
-</pre> <p>Without client certificate, enter this command, all on one line:
-</p> <pre class="verbatim">    /server add -ssl_cafile ~/.irssi/xinutec.pem
-                -auto -network xinutec irc.xinutec.net
-</pre> <p>In case you do have a client certificate with associated private key, save
+</p> <pre class="verbatim">/network add xinutec</pre> <p>Without client certificate, enter this command, all on one line:
+</p> <pre class="verbatim">/server add -ssl_cafile ~/.irssi/xinutec.pem
+            -auto -network xinutec irc.xinutec.net</pre> <p>In case you do have a client certificate with associated private key, save
 them both in 
   <code>~/.irssi/client.pem</code> and use the following command, again all on
 one line:
 
-</p> <pre class="verbatim">    /server add -ssl_cafile ~/.irssi/xinutec.pem
-                -ssl_cert ~/.irssi/client.pem
-                -auto -network xinutec irc.xinutec.net
-</pre> <p>In case you already registered the network and server in your client, you can
+</p> <pre class="verbatim">/server add -ssl_cafile ~/.irssi/xinutec.pem
+            -ssl_cert ~/.irssi/client.pem
+            -auto -network xinutec irc.xinutec.net</pre> <p>In case you already registered the network and server in your client, you can
 either remove the server with 
   <code>/server remove irc.xinutec.net</code> and re-add it
 as above, or manually edit the configuration file, so that it contains a
 section like this:
 
-</p> <pre class="verbatim">    {
-      address = "irc.xinutec.net";
-      chatnet = "xinutec";
-      port = "6697";
-      ssl_cert = "~/.irssi/client.pem";
-      ssl_cafile = "~/.irssi/xinutec.pem";
-      autoconnect = "yes";
-    },
-</pre> <h3>Common to purple based clients
+</p> <pre class="verbatim">{
+  address = "irc.xinutec.net";
+  chatnet = "xinutec";
+  port = "6697";
+  ssl_cert = "~/.irssi/client.pem";
+  ssl_cafile = "~/.irssi/xinutec.pem";
+  autoconnect = "yes";
+},</pre> <h3>Common to purple based clients
 </h3> <p>Pidgin, Empathy and other libpurple based clients store the CA certificates in
 a common place.
 </p> <p>Our Xinutec 
@@ -121,17 +117,17 @@ information in the Basic tab:
 </p> <p>Now, we need to tell Pidgin that we want to have an encrypted connection. Make
 sure you change the port number to 6697 and check the SSL checkbox.
 </p> <p>
-  <img src="pidgin/step3.png" alt="SSL Settings" />
+  <img alt="SSL Settings" src="pidgin/step3.png" />
 
 </p> <p>If you get the following message box, the installation of our CA certificate
 went wrong.
 </p> <p>
-  <img src="pidgin/step4.png" alt="Invalid Certificate" />
+  <img alt="Invalid Certificate" src="pidgin/step4.png" />
 
 </p> <p>In that case, click "View Certificate", which will bring this information
 window:
 </p> <p>
-  <img alt="Invalid Certificate" src="pidgin/step5.png" />
+  <img src="pidgin/step5.png" alt="Invalid Certificate" />
 
 </p> <p>Copy the information and then click OK and accept and contact a staff member
 to help solve the problem.
