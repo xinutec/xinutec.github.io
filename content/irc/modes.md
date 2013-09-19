@@ -48,21 +48,21 @@ that the SSL fingerprint is at least one character long:
 Ban people who are not connected via SSL (ban everybody, then make a ban
 exemption for people who use SSL):
 
-	/mode +be *!*@* z:*
+	/mode #foo +be *!*@* z:*
 
 Only allow people with any SSL client certificate to join the channel:
 
-	/mode +be *!*@* z:?*
+	/mode #foo +be *!*@* z:?*
 
 Ban a user with a certain SSL client certificate from this channel (consider
 the all-zero fingerprint an example value for a SHA-1 fingerprint)
 
-	/mode +b z:0000000000000000000000000000000000000000
+	/mode #foo +b z:0000000000000000000000000000000000000000
 
 Automatically voice somebody by fingerprint:
 
-	/mode +w v:z:0000000000000000000000000000000000000000
+	/mode #foo +w v:z:0000000000000000000000000000000000000000
 
 Automatically give channel op status to somebody by fingerprint:
 
-	/mode +w o:z:0000000000000000000000000000000000000000
+	/mode #foo +w o:z:0000000000000000000000000000000000000000
