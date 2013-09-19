@@ -8,6 +8,7 @@
 		[irc => "IRC", [
 			[connect => "Connecting"],
 			[rules => "Rules"],
+			[ssl => "SSL"],
 		]],
 		[dev => "Software", [
 			[contributing => "Contributing"],
