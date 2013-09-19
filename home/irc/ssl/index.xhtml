@@ -23,15 +23,15 @@
     <a href="/home/">Home</a>
   </li>
   <li>
-    <a href="/home/irc">IRC
+    <a href="/home/irc/">IRC
       <span class="small">[-]</span>
     </a>
     <ul>
       <li>
-        <a href="/home/irc/connect">Connecting</a>
+        <a href="/home/irc/connect/">Connecting</a>
       </li>
       <li>
-        <a href="/home/irc/rules">Rules</a>
+        <a href="/home/irc/rules/">Rules</a>
       </li>
       <li>
         <a id="actmenu">SSL</a>
@@ -39,7 +39,7 @@
     </ul>
   </li>
   <li>
-    <a href="/home/dev">Software
+    <a href="/home/dev/">Software
       <span class="small">[+]</span>
     </a>
   </li>
@@ -102,10 +102,25 @@ SHA1 Fingerprint=65:79:0D:72:C7:5B:81:11:9F:71:2B:AD:93:79:58:EA:2A:18:93:11
 </pre> <p>If the fingerprint value doesn't match the one mentioned here, someone has
 tampered with the CA certificate. In this case, please inform the network
 staff.
-</p> <p>Now place combined.pem in ~/.irssi and execute the following commands in irssi:
+</p> <p>Now execute the following commands in irssi:
 </p> <pre>/network add Xinutec
-/server add -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697
-</pre> <p>You can also find out about your own certificate's fingerprint by the same
+/server add -auto -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697
+</pre> <p>If you aren't sure what these flags do, take a look at 
+  <code>/help server</code>
+
+</p> <p>Alternatively, if you prefer editing the config file by hand, you can put something along the lines of
+</p> <pre>{
+  address = "irc.xinutec.net";
+  chatnet = "Xinutec";
+  port = "6697";
+  ssl_cert = "~/.irssi/combined.pem";
+  ssl_cafile = "~/.irssi/xinutec-ca.crt";
+  autoconnect = "yes";
+},
+</pre> <p>to the servers list in 
+  <code>~/.irssi/config</code>.
+
+</p> <p>You can also find out about your own certificate's fingerprint by the same
 command mentioned above:
 </p> <pre>$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1
 SHA1 Fingerprint=08:47:D4:2C:2C:26:6B:B9:FA:AF:F5:53:20:C5:A4:53:A7:1F:AC:43
@@ -133,7 +148,7 @@ was successful.
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Pippijn van Steenhoven</a></div> 
-			<div id="updated">Last updated Thu Sep 19 15:56:41 MEST 2013</div> 
+			<div id="updated">Last updated Thu Sep 19 16:29:56 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 
