@@ -8,12 +8,14 @@
 		[irc => "IRC", [
 			[connect => "Connecting"],
 			[rules => "Rules"],
+			[modes => "Modes"],
 			[ssl => "SSL"],
 		]],
 		[dev => "Software", [
 			[contributing => "Contributing"],
 			[cla => "CLA"],
 		]],
+		[contact => "Contact"],
 	],
 }
 
