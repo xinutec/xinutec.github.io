@@ -66,29 +66,33 @@ to contact our staff.
   <code>~/.irssi/xinutec.pem</code>. Then, add the Xinutec network to your configuration
 with the following command:
 
-</p> <pre class="code-block">/network add xinutec</pre> <p>Without client certificate, enter this command, all on one line:
-</p> <pre class="code-block">/server add -ssl_cafile ~/.irssi/xinutec.pem
-            -auto -network xinutec irc.xinutec.net</pre> <p>In case you do have a client certificate with associated private key, save
+</p> <pre class="verbatim">    /network add xinutec
+</pre> <p>Without client certificate, enter this command, all on one line:
+</p> <pre class="verbatim">    /server add -ssl_cafile ~/.irssi/xinutec.pem
+                -auto -network xinutec irc.xinutec.net
+</pre> <p>In case you do have a client certificate with associated private key, save
 them both in 
   <code>~/.irssi/client.pem</code> and use the following command, again all on
 one line:
 
-</p> <pre class="code-block">/server add -ssl_cafile ~/.irssi/xinutec.pem
-            -ssl_cert ~/.irssi/client.pem
-            -auto -network xinutec irc.xinutec.net</pre> <p>In case you already registered the network and server in your client, you can
+</p> <pre class="verbatim">    /server add -ssl_cafile ~/.irssi/xinutec.pem
+                -ssl_cert ~/.irssi/client.pem
+                -auto -network xinutec irc.xinutec.net
+</pre> <p>In case you already registered the network and server in your client, you can
 either remove the server with 
   <code>/server remove irc.xinutec.net</code> and re-add it
 as above, or manually edit the configuration file, so that it contains a
 section like this:
 
-</p> <pre class="code-block">  {
-    address = "irc.xinutec.net";
-    chatnet = "xinutec";
-    port = "6697";
-    ssl_cert = "~/.irssi/client.pem";
-    ssl_cafile = "~/.irssi/xinutec.pem";
-    autoconnect = "yes";
-  },</pre> <h3>Common to purple based clients
+</p> <pre class="verbatim">    {
+      address = "irc.xinutec.net";
+      chatnet = "xinutec";
+      port = "6697";
+      ssl_cert = "~/.irssi/client.pem";
+      ssl_cafile = "~/.irssi/xinutec.pem";
+      autoconnect = "yes";
+    },
+</pre> <h3>Common to purple based clients
 </h3> <p>Pidgin, Empathy and other libpurple based clients store the CA certificates in
 a common place.
 </p> <p>Our Xinutec 
@@ -136,7 +140,7 @@ to help solve the problem.
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Pippijn van Steenhoven</a></div> 
-			<div id="updated">Last updated Thu Sep 19 18:39:23 MEST 2013</div> 
+			<div id="updated">Last updated Thu Sep 19 19:13:45 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 
