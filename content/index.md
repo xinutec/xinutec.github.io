@@ -40,8 +40,7 @@ their homepages:
 - [phryk](http://phryk.net/)
 - [pippijn](http://xinutec.org/~pippijn)
 
-Additionally, we like to link to the homepages of some permanent non-staff
-members here:
+Additionally, we like to link to the homepages of some permanent members here:
 
 - [McManiaC](https://nils.cc/)
 
