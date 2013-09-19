@@ -68,10 +68,25 @@ If the fingerprint value doesn't match the one mentioned here, someone has
 tampered with the CA certificate. In this case, please inform the network
 staff.
 
-Now place combined.pem in ~/.irssi and execute the following commands in irssi:
+Now execute the following commands in irssi:
 
 	/network add Xinutec
-	/server add -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697
+	/server add -auto -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697
+
+If you aren't sure what these flags do, take a look at `/help server`
+
+Alternatively, if you prefer editing the config file by hand, you can put something along the lines of
+
+	{
+	  address = "irc.xinutec.net";
+	  chatnet = "Xinutec";
+	  port = "6697";
+	  ssl_cert = "~/.irssi/combined.pem";
+	  ssl_cafile = "~/.irssi/xinutec-ca.crt";
+	  autoconnect = "yes";
+	},
+
+to the servers list in `~/.irssi/config`.
 
 You can also find out about your own certificate's fingerprint by the same
 command mentioned above:
