@@ -91,8 +91,8 @@ modern standards and keys greater than 8192 might not work with all software
 </h3> <p>This list is obviously incomplete since there are lots of clients.
 If you use a client that isn't mentioned here, please help us help you and
 write a guide ;)
-</p> <h3>irssi
-</h3> <p>Irssi supports having both the key and certificate in a single file, so you can
+</p> <h4>irssi
+</h4> <p>Irssi supports having both the key and certificate in a single file, so you can
 append them together, first the key, then the certificate, and place it into
 
   <code>~/.irssi</code>:
@@ -127,8 +127,8 @@ SHA1 Fingerprint=08:47:D4:2C:2C:26:6B:B9:FA:AF:F5:53:20:C5:A4:53:A7:1F:AC:43</pr
 way the IRC server can use it for features like auto-op:
 </p> <pre class="verbatim">$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1 | sed 's/.*=//;s/://g'
 0847D42C2C266BB9FAAFF55320C5A453A71FAC43</pre> <p>This way you can easily copy-paste it whenever you need it.
-</p> <h3>eggdrop
-</h3> <p>You need the current development version of eggdrop (1.8.x prerelease from CVS)
+</p> <h4>eggdrop
+</h4> <p>You need the current development version of eggdrop (1.8.x prerelease from CVS)
 for SSL support. Earlier versions of eggdrop support neither IPv6 nor SSL.
 </p> <h3>Verifying that your certificate works
 </h3> <p>Once you have generated the key and certificate and set up your client to use
@@ -145,7 +145,7 @@ was successful.
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Thu Sep 19 16:43:21 MEST 2013</div> 
+			<div id="updated">Last updated Thu Sep 19 20:05:26 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 

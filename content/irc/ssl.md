@@ -46,7 +46,7 @@ This list is obviously incomplete since there are lots of clients.
 If you use a client that isn't mentioned here, please help us help you and
 write a guide ;)
 
-## irssi
+### irssi
 
 Irssi supports having both the key and certificate in a single file, so you can
 append them together, first the key, then the certificate, and place it into
@@ -102,7 +102,7 @@ way the IRC server can use it for features like auto-op:
 
 This way you can easily copy-paste it whenever you need it.
 
-## eggdrop
+### eggdrop
 
 You need the current development version of eggdrop (1.8.x prerelease from CVS)
 for SSL support. Earlier versions of eggdrop support neither IPv6 nor SSL.
