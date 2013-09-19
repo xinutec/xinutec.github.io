@@ -1,0 +1,4 @@
+=head1 Contact
+
+You may contact our staff via IRC. Alternatively, write an E-Mail to C<irc> at
+this domain, C<xinutec.net>.
