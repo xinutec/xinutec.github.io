@@ -2,6 +2,7 @@
 	name			=> 'Xinutec Network',
 	slogan		=> "Xinutec's place on the web",
 	shortname	=> 'Xinutec',
+	copyright	=> 'Xinutec Research Labs',
 
 	menubar => [
 		["Home"],
