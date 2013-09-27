@@ -1,3 +1,5 @@
+TARGET	= home
+
 include ../generator/generator.mk
 
 post-build: home/dev/cla.txt
