@@ -68,14 +68,14 @@ with the following command:
 
 </p> <pre class="verbatim">/network add xinutec</pre> <p>Without client certificate, enter this command, all on one line:
 </p> <pre class="verbatim">/server add -ssl_cafile ~/.irssi/xinutec.pem
-            -auto -network xinutec irc.xinutec.net</pre> <p>In case you do have a client certificate with associated private key, save
+            -auto -network xinutec irc.xinutec.net 6697</pre> <p>In case you do have a client certificate with associated private key, save
 them both in 
   <code>~/.irssi/client.pem</code> and use the following command, again all on
 one line:
 
 </p> <pre class="verbatim">/server add -ssl_cafile ~/.irssi/xinutec.pem
             -ssl_cert ~/.irssi/client.pem
-            -auto -network xinutec irc.xinutec.net</pre> <p>In case you already registered the network and server in your client, you can
+            -auto -network xinutec irc.xinutec.net 6697</pre> <p>In case you already registered the network and server in your client, you can
 either remove the server with 
   <code>/server remove irc.xinutec.net</code> and re-add it
 as above, or manually edit the configuration file, so that it contains a
@@ -117,7 +117,7 @@ information in the Basic tab:
 </p> <p>Now, we need to tell Pidgin that we want to have an encrypted connection. Make
 sure you change the port number to 6697 and check the SSL checkbox.
 </p> <p>
-  <img src="pidgin/step3.png" alt="SSL Settings" />
+  <img alt="SSL Settings" src="pidgin/step3.png" />
 
 </p> <p>If you get the following message box, the installation of our CA certificate
 went wrong.
@@ -136,7 +136,7 @@ to help solve the problem.
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Thu Sep 19 19:13:45 MEST 2013</div> 
+			<div id="updated">Last updated Fri Oct  4 13:41:41 MEST 2013</div> 
 		</div> 
 	</body> 
 </html> 
