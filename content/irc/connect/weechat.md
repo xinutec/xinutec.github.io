@@ -28,11 +28,6 @@ because our DH-parameters are only 1024 bits at the moment.
 There are more flags than `-ssl`, most importantly also `-autoconnect`. See
 `/help server` for more information.
 
-Last but not least you can also mess around with the security parameters and
-crypto algorithms used by weechat, most notably `sec.crypt.hash_algo` and
-`sec.crypt.cipher`, although we suggest you should only do this if you know
-your way around cryptography basics because the defaults are okay. 
-
 Finally, connect the newly created server:
 
 	/connect xinutec
