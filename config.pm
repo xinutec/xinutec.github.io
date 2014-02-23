@@ -7,7 +7,11 @@
 	menubar => [
 		["Home"],
 		[irc => "IRC", [
-			[connect => "Connecting"],
+			[connect	=> "Connecting", [
+				[irssi		=> "Irssi"],
+				[pidgin	=> "Pidgin"],
+				[weechat	=> "Weechat"]
+			]],
 			[rules => "Rules"],
 			[modes => "Modes"],
 			[ssl => "SSL"],
@@ -20,4 +24,4 @@
 	],
 }
 
-# vim:noexpandtab
+# vim:noexpandtab tabstop=2

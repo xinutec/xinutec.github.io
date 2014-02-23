@@ -28,7 +28,9 @@
     </a>
     <ul>
       <li>
-        <a href="/home/irc/connect">Connecting</a>
+        <a href="/home/irc/connect">Connecting
+          <span class="small">[+]</span>
+        </a>
       </li>
       <li>
         <a href="/home/irc/rules">Rules</a>
@@ -86,8 +88,7 @@ as most other networks do, users can set channel mode
 and the topic on the channel permanent. Combined with the auto-op mentioned
 above, this provides you with an advanced and cryptographically secure way of
 regaining your channel after a disconnect. If you want to unregister a
-channel, simply remove mode 
-  <code>-P</code> again.
+channel, simply remove the mode again.
 
 </p> <h3>Examples
 </h3> <p>I believe examples are more descriptive than explaining everything in too much
@@ -100,14 +101,19 @@ exemption for people who use SSL):
 </p> <pre class="verbatim">/mode #foo +be *!*@* z:*</pre> <p>Only allow people with any SSL client certificate to join the channel:
 </p> <pre class="verbatim">/mode #foo +be *!*@* z:?*</pre> <p>Ban a user with a certain SSL client certificate from this channel (consider
 the all-zero fingerprint an example value for a SHA-1 fingerprint)
-</p> <pre class="verbatim">/mode #foo +b z:0000000000000000000000000000000000000000</pre> <p>Automatically voice somebody by fingerprint:
+</p> <pre class="verbatim">/mode #foo +b z:0000000000000000000000000000000000000000</pre> <p>Please note that they can just generate a different SSL client certificate so
+banning everybody and whitelisting a select few people using 
+  <code>+e</code> and their
+respective fingerprint is a better approach in this case.
+
+</p> <p>Automatically voice somebody by fingerprint:
 </p> <pre class="verbatim">/mode #foo +w v:z:0000000000000000000000000000000000000000</pre> <p>Automatically give channel op status to somebody by fingerprint:
 </p> <pre class="verbatim">/mode #foo +w o:z:0000000000000000000000000000000000000000</pre>
 		</div> 
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Thu Sep 19 19:30:22 MEST 2013</div> 
+			<div id="updated">Last updated Sun Feb 23 12:49:57 CET 2014</div> 
 		</div> 
 	</body> 
 </html> 

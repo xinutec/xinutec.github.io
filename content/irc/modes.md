@@ -28,7 +28,7 @@ as most other networks do, users can set channel mode `+P` which makes modes
 and the topic on the channel permanent. Combined with the auto-op mentioned
 above, this provides you with an advanced and cryptographically secure way of
 regaining your channel after a disconnect. If you want to unregister a
-channel, simply remove mode `-P` again.
+channel, simply remove the mode again.
 
 Examples
 --------
@@ -58,6 +58,10 @@ Ban a user with a certain SSL client certificate from this channel (consider
 the all-zero fingerprint an example value for a SHA-1 fingerprint)
 
 	/mode #foo +b z:0000000000000000000000000000000000000000
+
+Please note that they can just generate a different SSL client certificate so
+banning everybody and whitelisting a select few people using `+e` and their
+respective fingerprint is a better approach in this case.
 
 Automatically voice somebody by fingerprint:
 

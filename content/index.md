@@ -11,22 +11,37 @@ You are welcome to connect to our network using the round robin DNS name
 [irc.xinutec.net](ircs://irc.xinutec.net/linux). IPv6 is supported on most
 servers, and the DNS will resolve to the right address record. We currently
 still allow [plain text](irc://irc.xinutec.net/linux) connections via port
-6667, but will soon only allow SSL secured connections via port 6697.  We
-provide web-based access to the network is with our self-hosted
-[qwebirc](http://qwebirc.xinutec.net/) via IPv4. It is also possible to
-connect using other IRC web-clients, but we recommend against using them,
-since we don't control their privacy policy.
+6667, but will soon only allow SSL secured connections via port 6697.
+
+*Important*: If you're connecting for the first time, please make sure to read
+the article about [connecting to xinutec](irc/connect) because we offer a
+network-wide SSL certification authority which you should enable in your
+client. (Boo to you if you don't, you might be compromising the safety of the
+entire network and make yourself vulnerable to man-in-the-middle attacks). It's
+a flaw of the SSL protocol that we can't actually force you to do this.
+
+Please note that SSL isn't sufficient for true privacy and you should always
+use end-to-end encryption like OTR to encrypt private messages.
+
+In addition to IRC connections we also provide web-based access to the network
+is with our self-hosted [qwebirc](https://qwebirc.xinutec.net/) (already SSL
+only) via IPv4. It is also possible to connect using other IRC web-clients, but
+we recommend against using them, since we don't control their privacy policy.
 
 See the page on [IRC](irc) for more information on connecting to the network.
 
 Channels
 --------
+  
+`#linux` is the main channel. It is called like that for historical reasons (it
+was started as a fork of another channel) and most of the time discussion isn't
+about linux.
 
-`#linux` is the main channel. If you run a channel, you are free to host a
-channel homepage (static HTML only) on this server. To do this, simply fork
-our [github repository](https://github.com/xinutec/xinutec.github.io/) and
-create a pull request once your changes are is in place. A staff member will
-then review and approve it.
+If you run a channel, you are free to host a channel homepage (static HTML
+only) on this server. To do this, simply fork our 
+[github repository](https://github.com/xinutec/xinutec.github.io/)
+and create a pull request once your changes are is in place. A staff member
+will then review and approve it.
 
 People
 ------

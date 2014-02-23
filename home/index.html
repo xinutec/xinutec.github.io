@@ -50,24 +50,40 @@ fans. We don't bite and fresh meat is always welcome. Happy chatting!
 servers, and the DNS will resolve to the right address record. We currently
 still allow 
   <a href="irc://irc.xinutec.net/linux">plain text</a> connections via port
-6667, but will soon only allow SSL secured connections via port 6697.  We
-provide web-based access to the network is with our self-hosted
+6667, but will soon only allow SSL secured connections via port 6697.
 
-  <a href="http://qwebirc.xinutec.net/">qwebirc</a> via IPv4. It is also possible to
-connect using other IRC web-clients, but we recommend against using them,
-since we don't control their privacy policy.
+</p> <p>
+  <em>Important</em>: If you're connecting for the first time, please make sure to read
+the article about 
+  <a href="irc/connect">connecting to xinutec</a> because we offer a
+network-wide SSL certification authority which you should enable in your
+client. (Boo to you if you don't, you might be compromising the safety of the
+entire network and make yourself vulnerable to man-in-the-middle attacks). It's
+a flaw of the SSL protocol that we can't actually force you to do this.
+
+</p> <p>Please note that SSL isn't sufficient for true privacy and you should always
+use end-to-end encryption like OTR to encrypt private messages.
+</p> <p>In addition to IRC connections we also provide web-based access to the network
+is with our self-hosted 
+  <a href="https://qwebirc.xinutec.net/">qwebirc</a> (already SSL
+only) via IPv4. It is also possible to connect using other IRC web-clients, but
+we recommend against using them, since we don't control their privacy policy.
 
 </p> <p>See the page on 
   <a href="irc">IRC</a> for more information on connecting to the network.
 
 </p> <h3>Channels
 </h3> <p>
-  <code>#linux</code> is the main channel. If you run a channel, you are free to host a
-channel homepage (static HTML only) on this server. To do this, simply fork
-our 
-  <a href="https://github.com/xinutec/xinutec.github.io/">github repository</a> and
-create a pull request once your changes are is in place. A staff member will
-then review and approve it.
+  <code>#linux</code> is the main channel. It is called like that for historical reasons (it
+was started as a fork of another channel) and most of the time discussion isn't
+about linux.
+
+</p> <p>If you run a channel, you are free to host a channel homepage (static HTML
+only) on this server. To do this, simply fork our 
+
+  <a href="https://github.com/xinutec/xinutec.github.io/">github repository</a>
+and create a pull request once your changes are is in place. A staff member
+will then review and approve it.
 
 </p> <h3>People
 </h3> <p>These are the network operators/staff (effective or retired) with links to
@@ -106,7 +122,7 @@ page on this server, similar to a channel page.
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Thu Sep 19 18:52:49 MEST 2013</div> 
+			<div id="updated">Last updated Sun Feb 23 12:40:59 CET 2014</div> 
 		</div> 
 	</body> 
 </html> 
