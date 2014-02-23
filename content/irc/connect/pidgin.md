@@ -17,27 +17,27 @@ Refer to the above section about purple clients for the CA certificate.
 
 Next, add the IRC server to your client:
 
-![Manage Accounts](pidgin_img/step1.png)
+![Manage Accounts](screenshots/pidgin1.png)
 
 Click "Add" in the "Manage Accounts" dialog and enter the following
 information in the Basic tab:
 
-![Add Account](pidgin_img/step2.png)
+![Add Account](screenshots/pidgin2.png)
 
 Now, we need to tell Pidgin that we want to have an encrypted connection. Make
 sure you change the port number to 6697 and check the SSL checkbox.
 
-![SSL Settings](pidgin_img/step3.png)
+![SSL Settings](screenshots/pidgin3.png)
 
 If you get the following message box, the installation of our CA certificate
 went wrong.
 
-![Invalid Certificate](pidgin_img/step4.png)
+![Invalid Certificate](screenshots/pidgin4.png)
 
 In that case, click "View Certificate", which will bring this information
 window:
 
-![Invalid Certificate](pidgin_img/step5.png)
+![Invalid Certificate](screenshots/pidgin5.png)
 
 Copy the information and then click OK and accept and contact a staff member
 to help solve the problem.
