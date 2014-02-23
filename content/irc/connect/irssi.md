@@ -1,7 +1,7 @@
 Irssi
 =====
 
-First, download the [CA certificate](ca.crt). Save this under
+First, download the [CA certificate](../ca.crt). Save this under
 `~/.irssi/xinutec.pem`. Then, add the Xinutec network to your configuration
 with the following command:
 

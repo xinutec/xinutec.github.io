@@ -4,7 +4,7 @@ Common to purple based clients
 Pidgin, Empathy and other libpurple based clients store the CA certificates in
 a common place.
 
-Our Xinutec [CA certificate](ca.crt) should be saved in the global CA store.
+Our Xinutec [CA certificate](../ca.crt) should be saved in the global CA store.
 Save it as `Xinutec_CA.pem` under `/usr/share/purple/ca-certs` (or
 `/usr/local/share/purple/ca-certs` as appropriate). Under Windows, save it
 under `C:\Program Files\Pidgin\ca-certs` (or `C:\Program Files
