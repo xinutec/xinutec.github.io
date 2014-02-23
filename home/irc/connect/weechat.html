@@ -70,7 +70,9 @@
 			<h2>Weechat
 </h2> <p>Weechat is a ncurses based IRC client. It currently does not support assigning
 a CA on a per per-network basis, so you will have to configure the Xinutec CA
-as the global CA. This is a bug the author intends to fix within the next few
+as the global CA, which means the Xinutec CA will be trusted to sign the
+certificates of any IRC network this instance of weechat will connect to via
+SSL. This is a small security bug the author intends to fix within the next few
 releases. See 
   <a href="https://savannah.nongnu.org/task/?11357">this bug report</a> for
 status updates.
@@ -78,12 +80,23 @@ status updates.
 </p> <p>First, download the 
   <a href="../ca.crt">CA certificate</a>. Save this under
 
-  <code>~/.weechat/xinutec.pem</code>
+  <code>~/.weechat/ssl-certificates.pem</code>. Add all other CA certificates of networks
+you want to connect to securely, e.g. for freenode you might need a CA called
+
+  <code>UTN_USERFirst_Hardware_Root_CA.pem</code>, so if you're running Debian, you need to
+do this:
+
+</p> <pre class="verbatim">cat /etc/ssl/certs/UTN_USERFirst_Hardware_Root_CA.pem &gt;&gt; ~/.weechat/ssl-certificates.pem </pre> <p>Repeat this for all CA certificates where establishing the connection fails.
+The name of the CA certificate you need to concatenate to the
+
+  <code>~/.weechat/ssl-certificates.pem</code> file will appear somewhere in the as
+"issuer". Look in 
+  <code>/etc/ssl/certs</code> for a file with a corresponding name.
 
 </p> <p>Then, set this as the default CA for all IRC networks as follows (alternatively
 you can include it in your global CA certificate store if and only if you trust
 us enough with this).
-</p> <pre class="verbatim">/set weechat.network.gnutls_ca_file ~/.weechat/xinutec.pem</pre> <p>Now you can add the server:
+</p> <pre class="verbatim">/set weechat.network.gnutls_ca_file ~/.weechat/ssl-certificates.pem</pre> <p>Now you can add the server:
 </p> <pre class="verbatim">/server add xinutec irc.xinutec.net/6697 -ssl</pre> <p>You will need to reduce the minimum key size for Diffie-Hellman key exchange
 because our DH-parameters are only 1024 bits at the moment.
 </p> <pre class="verbatim">/set irc.server.xinutec.ssl_dhkey_size 1024</pre> <p>There are more flags than 
@@ -102,7 +115,7 @@ because our DH-parameters are only 1024 bits at the moment.
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Sun Feb 23 18:00:15 CET 2014</div> 
+			<div id="updated">Last updated Sun Feb 23 20:01:31 CET 2014</div> 
 		</div> 
 	</body> 
 </html> 
