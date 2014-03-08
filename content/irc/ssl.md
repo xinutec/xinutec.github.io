@@ -45,10 +45,10 @@ UNIX-like operating systems like Linux, \*BSD and Mac OS X typically have the
 openssl commandline tool already installed.
 
 Windows users will need to [download the OpenSSL Win32 binaries][openssl-win32]
-or [Microsoft's makecert.exe][makecert-win32] and use the Windows command
-prompt to generate certificates since Windows itself does not ship a tool for
-generating certificates. Alternatives include using IIS or Microsoft Visual
-Studio to generate certificates, if you have them installed.
+or [Microsoft's makecert.exe][makecert-win32] (which is part of Microsoft
+Visual C++) and use the Windows command prompt to generate certificates since
+Windows itself does not ship a tool for generating certificates. Alternatively,
+it is also possible to generate certificates using IIS.
 
 Verifying that your certificate works
 -------------------------------------
@@ -68,13 +68,17 @@ certificate was successful.
 You can also find out about your own certificate's fingerprint by using the
 openssl command mentioned above:
 
-	$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1
+	$ openssl x509 -noout -in path/to/cert.pem -fingerprint -sha1
 	SHA1 Fingerprint=08:47:D4:2C:2C:26:6B:B9:FA:AF:F5:53:20:C5:A4:53:A7:1F:AC:43
+
+This also works if you concatenated your certificate and private key into a
+single file, the way irssi and some other IRC clients require it, so there's no
+need to keep the certificate file around separately.
 
 Please note that you need to strip all colons from this value to format it in a
 way the IRC server can use it for features like auto-op:
 
-	$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1 | sed 's/.*=//;s/://g'
+	$ openssl x509 -noout -in path/to/cert.pem -fingerprint -sha1 | sed 's/.*=//;s/://g'
 	0847D42C2C266BB9FAAFF55320C5A453A71FAC43
 
 This way you can easily copy-paste it whenever you need it.
