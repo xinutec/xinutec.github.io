@@ -24,11 +24,12 @@ Registering your channel
 ------------------------
 
 While we do not provide nickname and channel as registration service packages
-as most other networks do, users can set channel mode `+P` which makes modes
-and the topic on the channel permanent. Combined with the auto-op mentioned
-above, this provides you with an advanced and cryptographically secure way of
-regaining your channel after a disconnect. If you want to unregister a
-channel, simply remove the mode again.
+as most other networks do, you can request our staff to set channel mode `+P`
+which makes modes and the topic on the channel permanent. Combined with the
+auto-op mentioned above, this provides you with an advanced and
+cryptographically secure way of regaining your channel after a disconnect. If
+you want to unregister a channel, simply ask our staff to remove the mode
+again.
 
 Examples
 --------
