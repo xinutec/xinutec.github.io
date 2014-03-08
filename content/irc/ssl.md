@@ -15,7 +15,9 @@ Getting started
 ---------------
 
 You will need to generate a SSL private key and certificate (a self-signed one
-will do, so you won't even have to deal with certification authorities).
+will do, so you won't even have to deal with certification authorities, however
+if you use S/MIME for encrypting or signing e-mail, you can also just reuse the
+private key and certificate and save yourself some time).
 
 You can either use `openssl(1)` (should be available just about everywhere)
 or you can use `certtool(1)` from the gnutls package (gnutls-bin on debian).
@@ -37,59 +39,34 @@ make your certificate valid until the end of time or SSL, whichever comes first.
 You can also adjust the key size, i.e. replace the 4096 by a different number
 but please note that keys smaller than 2048 bits are considered unsafe by
 modern standards and keys greater than 8192 might not work with all software
-(in particular, apple computers seem to have a problem with them).
+(in particular, Apple computers seem to have a problem with them).
 
-Using the certificate with your client
---------------------------------------
+UNIX-like operating systems like Linux, \*BSD and Mac OS X typically have the
+openssl commandline tool already installed.
 
-This list is obviously incomplete since there are lots of clients.
-If you use a client that isn't mentioned here, please help us help you and
-write a guide ;)
+Windows users will need to [download the OpenSSL Win32 binaries][openssl-win32]
+or [Microsoft's makecert.exe][makecert-win32] and use the Windows command
+prompt to generate certificates since Windows itself does not ship a tool for
+generating certificates. Alternatives include using IIS or Microsoft Visual
+Studio to generate certificates, if you have them installed.
 
-### irssi
+Verifying that your certificate works
+-------------------------------------
 
-Irssi supports having both the key and certificate in a single file, so you can
-append them together, first the key, then the certificate, and place it into
-`~/.irssi`:
+Assuming you already configured your IRC client to use the certificate
+according to the [client specific instructions](connect) and reconnected
+(because the certificate is only transmitted when a connection is made), you
+can `/whois` your own nick to verify if it worked. If you see something like
+this
 
-	$ cat key.pem cert.pem > ~/.irssi/combined.pem
+	* is using a secure connection
+	* has client certificate fingerprint 0847d42c2c266bb9faaff55320c5a453a71fac43
 
-While you're at it, you should also place our CA certificate next to it:
+in the whois output, this means that your attempt at installing a client
+certificate was successful.
 
-	$ wget -O ~/.irssi/xinutec-ca.crt http://xinutec.net/home/irc/ca.crt
-
-If you want, you can verify the CA certificate's fingerprint now by checking
-the output of the following command:
-
-	$ openssl x509 -noout -in ~/.irssi/xinutec-ca.crt -fingerprint -sha1 
-	SHA1 Fingerprint=65:79:0D:72:C7:5B:81:11:9F:71:2B:AD:93:79:58:EA:2A:18:93:11
-
-If the fingerprint value doesn't match the one mentioned here, someone has
-tampered with the CA certificate. In this case, please inform the network
-staff.
-
-Now execute the following commands in irssi:
-
-	/network add Xinutec
-	/server add -auto -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697
-
-If you aren't sure what these flags do, take a look at `/help server`
-
-Alternatively, if you prefer editing the config file by hand, you can put something along the lines of
-
-	{
-	  address = "irc.xinutec.net";
-	  chatnet = "Xinutec";
-	  port = "6697";
-	  ssl_cert = "~/.irssi/combined.pem";
-	  ssl_cafile = "~/.irssi/xinutec-ca.crt";
-	  autoconnect = "yes";
-	},
-
-to the servers list in `~/.irssi/config`.
-
-You can also find out about your own certificate's fingerprint by the same
-command mentioned above:
+You can also find out about your own certificate's fingerprint by using the
+openssl command mentioned above:
 
 	$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1
 	SHA1 Fingerprint=08:47:D4:2C:2C:26:6B:B9:FA:AF:F5:53:20:C5:A4:53:A7:1F:AC:43
@@ -102,22 +79,10 @@ way the IRC server can use it for features like auto-op:
 
 This way you can easily copy-paste it whenever you need it.
 
-### eggdrop
+Using the certificate fingerprint to automatically set modes
+------------------------------------------------------------
 
-You need the current development version of eggdrop (1.8.x prerelease from CVS)
-for SSL support. Earlier versions of eggdrop support neither IPv6 nor SSL.
+This is described [in a separate article](modes).
 
-
-Verifying that your certificate works
--------------------------------------
-
-Once you have generated the key and certificate and set up your client to use
-them, you will need to reconnect because the certificate is only sent when a
-connection is established. You can `/whois` your own nick to verify if it
-worked; if you see something according the lines of 
-
-	* is using a secure connection
-	* has client certificate fingerprint 0847d42c2c266bb9faaff55320c5a453a71fac43
-
-in the whois output, this means that your attempt at installing a fingerprint
-was successful.
+[openssl-win32]:  https://www.openssl.org/related/binaries.html
+[makecert-win32]: http://msdn.microsoft.com/en-us/library/bfsktky3%28v=vs.110%29.aspx
