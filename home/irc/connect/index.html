@@ -74,12 +74,23 @@ but you would like to add a short how-to, perhaps with screenshots, feel free
 to contact our staff.
 </p> <p>Please see the menu on the left side for a list of clients for which
 documentation currently exists.
+</p> <p>The first step for all clients is to download and verify the CA certificate.
+You can download the certificate with wget or you can just save it by some
+other means as 
+  <code>xinutec-ca.crt</code> in the current directory.
+
+</p> <pre class="verbatim">$ wget http://xinutec.net/home/irc/ca.crt -O xinutec-ca.crt
+[wget downloading output omitted]</pre> <p>Now please check it against the output of the following command:
+</p> <pre class="verbatim">$ openssl x509 -noout -in xinutec-ca.crt -fingerprint -sha1 
+SHA1 Fingerprint=65:79:0D:72:C7:5B:81:11:9F:71:2B:AD:93:79:58:EA:2A:18:93:11</pre> <p>If the fingerprint value doesn't match the one mentioned here, someone has
+tampered with the CA certificate. In this case, please inform the network
+staff.
 </p>
 		</div> 
 
 		<div id="footer"> 
-			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Sun Feb 23 13:36:05 CET 2014</div> 
+			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2014 Xinutec Research Labs</a></div> 
+			<div id="updated">Last updated Sat Mar  8 12:27:35 CET 2014</div> 
 		</div> 
 	</body> 
 </html> 

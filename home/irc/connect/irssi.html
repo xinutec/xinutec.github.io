@@ -96,12 +96,47 @@ section like this:
   ssl_cert = "~/.irssi/client.pem";
   ssl_cafile = "~/.irssi/xinutec.pem";
   autoconnect = "yes";
-},</pre>
+},</pre> <h3>Connecting with a client certificate
+</h3> <p>
+  <a href="../ssl">SSL client certificates</a> are our official way of registering channels
+and handling channel access control. Please read this article along with the
+
+  <a href="../modes">article on channel modes</a> before continuing with the irssi specific
+instructions. This document assumes that you generated a private key and a
+client certitifate and saved them in the files 
+  <code>key.pem</code> and 
+  <code>cert.pem</code> in the
+current directory.
+
+</p> <p>Irssi supports having both the key and certificate in a single file, so you can
+append them together, first the key, then the certificate, and place the
+concatenated file in your 
+  <code>~/.irssi</code> directory:
+
+</p> <pre class="verbatim">$ cat key.pem cert.pem &gt; ~/.irssi/combined.pem</pre> <p>Now execute the following commands in irssi:
+</p> <pre class="verbatim">/network add Xinutec
+/server add -auto -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697</pre> <p>If you aren't sure what these flags do, take a look at 
+  <code>/help server</code>
+
+</p> <p>Alternatively, if you prefer editing the config file, e.g. because you already
+have added a server entry for Xinutec like above but want to add a client
+certificate now, you can put something along the lines of
+</p> <pre class="verbatim">{
+  address = "irc.xinutec.net";
+  chatnet = "Xinutec";
+  port = "6697";
+  ssl_cert = "~/.irssi/combined.pem";
+  ssl_cafile = "~/.irssi/xinutec-ca.crt";
+  autoconnect = "yes";
+},</pre> <p>to the servers list in 
+  <code>~/.irssi/config</code> using your favourite text editor.
+
+</p>
 		</div> 
 
 		<div id="footer"> 
-			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Sun Feb 23 14:15:42 CET 2014</div> 
+			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2014 Xinutec Research Labs</a></div> 
+			<div id="updated">Last updated Sat Mar  8 12:30:49 CET 2014</div> 
 		</div> 
 	</body> 
 </html> 

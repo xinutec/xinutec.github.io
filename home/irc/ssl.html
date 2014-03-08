@@ -67,7 +67,9 @@ running a services package, i.e. no service-like bots like NickServ, ChanServ
 etc. exist on this network.
 </p> <h3>Getting started
 </h3> <p>You will need to generate a SSL private key and certificate (a self-signed one
-will do, so you won't even have to deal with certification authorities).
+will do, so you won't even have to deal with certification authorities, however
+if you use S/MIME for encrypting or signing e-mail, you can also just reuse the
+private key and certificate and save yourself some time).
 </p> <p>You can either use 
   <code>openssl(1)</code> (should be available just about everywhere)
 or you can use 
@@ -88,66 +90,46 @@ make your certificate valid until the end of time or SSL, whichever comes first.
 </p> <p>You can also adjust the key size, i.e. replace the 4096 by a different number
 but please note that keys smaller than 2048 bits are considered unsafe by
 modern standards and keys greater than 8192 might not work with all software
-(in particular, apple computers seem to have a problem with them).
-</p> <h3>Using the certificate with your client
-</h3> <p>This list is obviously incomplete since there are lots of clients.
-If you use a client that isn't mentioned here, please help us help you and
-write a guide ;)
-</p> <h4>irssi
-</h4> <p>Irssi supports having both the key and certificate in a single file, so you can
-append them together, first the key, then the certificate, and place it into
+(in particular, Apple computers seem to have a problem with them).
+</p> <p>UNIX-like operating systems like Linux, *BSD and Mac OS X typically have the
+openssl commandline tool already installed.
+</p> <p>Windows users will need to 
+  <a href="https://www.openssl.org/related/binaries.html">download the OpenSSL Win32 binaries</a>
+or 
+  <a href="http://msdn.microsoft.com/en-us/library/bfsktky3%28v=vs.110%29.aspx">Microsoft's makecert.exe</a> and use the Windows command
+prompt to generate certificates since Windows itself does not ship a tool for
+generating certificates. Alternatives include using IIS or Microsoft Visual
+Studio to generate certificates, if you have them installed.
 
-  <code>~/.irssi</code>:
+</p> <h3>Verifying that your certificate works
+</h3> <p>Assuming you already configured your IRC client to use the certificate
+according to the 
+  <a href="connect">client specific instructions</a> and reconnected
+(because the certificate is only transmitted when a connection is made), you
+can 
+  <code>/whois</code> your own nick to verify if it worked. If you see something like
+this
 
-</p> <pre class="verbatim">$ cat key.pem cert.pem &gt; ~/.irssi/combined.pem</pre> <p>While you're at it, you should also place our CA certificate next to it:
-</p> <pre class="verbatim">$ wget -O ~/.irssi/xinutec-ca.crt http://xinutec.net/home/irc/ca.crt</pre> <p>If you want, you can verify the CA certificate's fingerprint now by checking
-the output of the following command:
-</p> <pre class="verbatim">$ openssl x509 -noout -in ~/.irssi/xinutec-ca.crt -fingerprint -sha1 
-SHA1 Fingerprint=65:79:0D:72:C7:5B:81:11:9F:71:2B:AD:93:79:58:EA:2A:18:93:11</pre> <p>If the fingerprint value doesn't match the one mentioned here, someone has
-tampered with the CA certificate. In this case, please inform the network
-staff.
-</p> <p>Now execute the following commands in irssi:
-</p> <pre class="verbatim">/network add Xinutec
-/server add -auto -network Xinutec -ssl -ssl_cert ~/.irssi/combined.pem -ssl_verify -ssl_cafile ~/.irssi/xinutec-ca.crt irc.xinutec.net 6697</pre> <p>If you aren't sure what these flags do, take a look at 
-  <code>/help server</code>
-
-</p> <p>Alternatively, if you prefer editing the config file by hand, you can put something along the lines of
-</p> <pre class="verbatim">{
-  address = "irc.xinutec.net";
-  chatnet = "Xinutec";
-  port = "6697";
-  ssl_cert = "~/.irssi/combined.pem";
-  ssl_cafile = "~/.irssi/xinutec-ca.crt";
-  autoconnect = "yes";
-},</pre> <p>to the servers list in 
-  <code>~/.irssi/config</code>.
-
-</p> <p>You can also find out about your own certificate's fingerprint by the same
-command mentioned above:
+</p> <pre class="verbatim">* is using a secure connection
+* has client certificate fingerprint 0847d42c2c266bb9faaff55320c5a453a71fac43</pre> <p>in the whois output, this means that your attempt at installing a client
+certificate was successful.
+</p> <p>You can also find out about your own certificate's fingerprint by using the
+openssl command mentioned above:
 </p> <pre class="verbatim">$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1
 SHA1 Fingerprint=08:47:D4:2C:2C:26:6B:B9:FA:AF:F5:53:20:C5:A4:53:A7:1F:AC:43</pre> <p>Please note that you need to strip all colons from this value to format it in a
 way the IRC server can use it for features like auto-op:
 </p> <pre class="verbatim">$ openssl x509 -noout -in ~/.irssi/combined.pem -fingerprint -sha1 | sed 's/.*=//;s/://g'
 0847D42C2C266BB9FAAFF55320C5A453A71FAC43</pre> <p>This way you can easily copy-paste it whenever you need it.
-</p> <h4>eggdrop
-</h4> <p>You need the current development version of eggdrop (1.8.x prerelease from CVS)
-for SSL support. Earlier versions of eggdrop support neither IPv6 nor SSL.
-</p> <h3>Verifying that your certificate works
-</h3> <p>Once you have generated the key and certificate and set up your client to use
-them, you will need to reconnect because the certificate is only sent when a
-connection is established. You can 
-  <code>/whois</code> your own nick to verify if it
-worked; if you see something according the lines of 
+</p> <h3>Using the certificate fingerprint to automatically set modes
+</h3> <p>This is described 
+  <a href="modes">in a separate article</a>.
 
-</p> <pre class="verbatim">* is using a secure connection
-* has client certificate fingerprint 0847d42c2c266bb9faaff55320c5a453a71fac43</pre> <p>in the whois output, this means that your attempt at installing a fingerprint
-was successful.
 </p>
 		</div> 
 
 		<div id="footer"> 
-			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2013 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Thu Sep 19 20:05:26 MEST 2013</div> 
+			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2014 Xinutec Research Labs</a></div> 
+			<div id="updated">Last updated Sat Mar  8 12:52:08 CET 2014</div> 
 		</div> 
 	</body> 
 </html> 
