@@ -30,11 +30,6 @@ Now you can add the server:
 
 	/server add xinutec irc.xinutec.net/6697 -ssl
 
-You will need to reduce the minimum key size for Diffie-Hellman key exchange
-because our DH-parameters are only 1024 bits at the moment.
-
-	/set irc.server.xinutec.ssl_dhkey_size 1024
-
 There are more flags than `-ssl`, most importantly also `-autoconnect`. See
 `/help server` for more information.
 
