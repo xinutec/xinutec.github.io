@@ -14,6 +14,7 @@
 		[channels => "Channels", [
 			[modes => "Channel Modes"],
 			[ssl => "Client certificates"],
+			[linux => "#linux"],
 		]],
 		[people => "People"],
 		[dev => "Software", [
