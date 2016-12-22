@@ -8,10 +8,6 @@ obvious, but let's state it explicitly:
 - our servers do not log any user messages
 - we do not provide logger bots or host channel logs
 
-We also do not endorse other people doing so. We do provide a publicly
-accessible [quotes](http://quotes.xinutec.net) database, but a quote may only
-be added with consent of all people involved.
-
 SSL
 ---
 
