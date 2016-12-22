@@ -9,7 +9,7 @@
 		[irc => "IRC", [
 			[connect	=> "Connecting", [
 				[irssi		=> "Irssi"],
-				[pidgin	=> "Pidgin"],
+				[pidgin		=> "Pidgin"],
 				[weechat	=> "Weechat"]
 			]],
 			[rules => "Rules"],
