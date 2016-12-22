@@ -9,6 +9,7 @@ These are the effective network operators with links to their homepages:
 Additionally, we would like to link to the homepages of some permanent members
 here:
 
+- [fgenesis](https://fg.wzff.de/)
 - [maito](http://maito.name/)
 - [McManiaC](https://nils.cc/)
 - [Palo](http://des-grauens.de/)
