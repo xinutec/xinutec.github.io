@@ -1,9 +1,8 @@
 Irssi
 =====
 
-First, download the [CA certificate](../ca.crt). Save this under
-`~/.irssi/xinutec.pem`. Then, add the Xinutec network to your configuration
-with the following command:
+First, add the Xinutec network to your configuration with the following
+command:
 
         /network add xinutec
 
@@ -15,8 +14,7 @@ continue with the instructions on connecting without a client certificate.
 
 Without client certificate, enter this command, all on one line:
 
-        /server add -ssl_cafile ~/.irssi/xinutec.pem -ssl_verify
-                    -auto -network xinutec irc.xinutec.net 6697
+        /server add -ssl_verify -auto -network xinutec irc.xinutec.net 6697
 
 In case you do have a client certificate with associated private key, save
 them both in `~/.irssi/client.pem` by concatenating them with the following
@@ -26,8 +24,7 @@ shell-command:
 
 and use the following irssi command, again all on one line:
 
-        /server add -ssl_cafile ~/.irssi/xinutec.pem
-                    -ssl_cert ~/.irssi/client.pem -ssl_verify
+        /server add -ssl_cert ~/.irssi/client.pem -ssl_verify
                     -auto -network xinutec irc.xinutec.net 6697
 
 If you aren't sure what these flags do, take a look at `/help server`
@@ -43,7 +40,6 @@ list:
           chatnet = "xinutec";
           port = "6697";
           ssl_cert = "~/.irssi/client.pem";
-          ssl_cafile = "~/.irssi/xinutec.pem";
           autoconnect = "yes";
         },
 
