@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
 	<head profile="http://www.w3.org/2005/10/profile"> 
-		<title>Xinutec - Irc / Connect / Irssi</title> 
+		<title>Xinutec - Connect / Irssi</title> 
 		<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/> 
 		<meta http-equiv="content-style-type" content="text/css"/> 
-		<meta name="description" content="Xinutec Network - Irc / Connect / Irssi"/> 
+		<meta name="description" content="Xinutec Network - Connect / Irssi"/> 
 		<link rel="stylesheet" href="/home/css/home.css" type="text/css" title="Default" media="screen"/> 
 		<link rel="icon" type="image/x-icon" href="/home/favicon.ico"/>
 	</head> 
@@ -12,7 +12,7 @@
 	<body> 
 		<div id="header"> 
 			<h1>Xinutec Network</h1> 
-			<p id="slogan">Xinutec's place on the web</p> 
+			<p id="slogan">a virtual hackerspace</p> 
 		</div> 
 
 		<div id="sidebar"> 
@@ -23,36 +23,28 @@
     <a href="/home/">Home</a>
   </li>
   <li>
-    <a href="/home/irc">IRC
+    <a href="/home/connect">Connecting
       <span class="small">[-]</span>
     </a>
     <ul>
       <li>
-        <a href="/home/irc/connect">Connecting
-          <span class="small">[-]</span>
-        </a>
-        <ul>
-          <li>
-            <a id="actmenu">Irssi</a>
-          </li>
-          <li>
-            <a href="/home/irc/connect/pidgin">Pidgin</a>
-          </li>
-          <li>
-            <a href="/home/irc/connect/weechat">Weechat</a>
-          </li>
-        </ul>
+        <a id="actmenu">Irssi</a>
       </li>
       <li>
-        <a href="/home/irc/rules">Rules</a>
+        <a href="/home/connect/pidgin">Pidgin</a>
       </li>
       <li>
-        <a href="/home/irc/modes">Modes</a>
-      </li>
-      <li>
-        <a href="/home/irc/ssl">SSL</a>
+        <a href="/home/connect/weechat">Weechat</a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="/home/channels">Channels
+      <span class="small">[+]</span>
+    </a>
+  </li>
+  <li>
+    <a href="/home/people">People</a>
   </li>
   <li>
     <a href="/home/dev">Software
@@ -68,30 +60,24 @@
 
 		<div id="content">
 			<h2>Irssi
-</h2> <p>First, download the 
-  <a href="../ca.crt">CA certificate</a>. Save this under
-
-  <code>~/.irssi/xinutec.pem</code>. Then, add the Xinutec network to your configuration
-with the following command:
-
+</h2> <p>First, add the Xinutec network to your configuration with the following
+command:
 </p> <pre class="verbatim">/network add xinutec</pre> <p>
-  <a href="../ssl">SSL client certificates</a> are our official way of registering channels
+  <a href="../channels/ssl">SSL client certificates</a> are our official way of registering channels
 and handling channel access control. Please read this article along with the
 
-  <a href="../modes">article on channel modes</a> before continuing with the irssi specific
+  <a href="../channels/modes">article on channel modes</a> before continuing with the irssi specific
 instructions if you're interested in being a channel operator. Otherwise,
 continue with the instructions on connecting without a client certificate.
 
 </p> <p>Without client certificate, enter this command, all on one line:
-</p> <pre class="verbatim">/server add -ssl_cafile ~/.irssi/xinutec.pem -ssl_verify
-            -auto -network xinutec irc.xinutec.net 6697</pre> <p>In case you do have a client certificate with associated private key, save
+</p> <pre class="verbatim">/server add -ssl_verify -auto -network xinutec irc.xinutec.net 6697</pre> <p>In case you do have a client certificate with associated private key, save
 them both in 
   <code>~/.irssi/client.pem</code> by concatenating them with the following
 shell-command:
 
 </p> <pre class="verbatim">cat key.pem cert.pem &gt; ~/.irssi/client.pem</pre> <p>and use the following irssi command, again all on one line:
-</p> <pre class="verbatim">/server add -ssl_cafile ~/.irssi/xinutec.pem
-            -ssl_cert ~/.irssi/client.pem -ssl_verify
+</p> <pre class="verbatim">/server add -ssl_cert ~/.irssi/client.pem -ssl_verify
             -auto -network xinutec irc.xinutec.net 6697</pre> <p>If you aren't sure what these flags do, take a look at 
   <code>/help server</code>
 
@@ -108,7 +94,6 @@ list:
   chatnet = "xinutec";
   port = "6697";
   ssl_cert = "~/.irssi/client.pem";
-  ssl_cafile = "~/.irssi/xinutec.pem";
   autoconnect = "yes";
 },</pre> <p>If you don't want to use a client certificate, simply remove the line that
 starts with 
@@ -119,7 +104,7 @@ starts with
 
 		<div id="footer"> 
 			<div id="copyright"><a href="/home/contact">Copyright &copy; 2007-2016 Xinutec Research Labs</a></div> 
-			<div id="updated">Last updated Tue Jan 26 04:29:08 CET 2016</div> 
+			<div id="updated">Last updated Thu Dec 22 22:42:19 CET 2016</div> 
 		</div> 
 	</body> 
 </html> 
