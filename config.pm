@@ -1,21 +1,21 @@
 {
 	name			=> 'Xinutec Network',
-	slogan		=> "Xinutec's place on the web",
+	slogan		=> "a virtual hackerspace",
 	shortname	=> 'Xinutec',
 	copyright	=> 'Xinutec Research Labs',
 
 	menubar => [
 		["Home"],
-		[irc => "IRC", [
-			[connect	=> "Connecting", [
-				[irssi		=> "Irssi"],
-				[pidgin		=> "Pidgin"],
-				[weechat	=> "Weechat"]
-			]],
-			[rules => "Rules"],
-			[modes => "Modes"],
-			[ssl => "SSL"],
+		[connect	=> "Connecting", [
+			[irssi		=> "Irssi"],
+			[pidgin		=> "Pidgin"],
+			[weechat	=> "Weechat"]
 		]],
+		[channels => "Channels", [
+			[modes => "Channel Modes"],
+			[ssl => "Client certificates"],
+		]],
+		[people => "People"],
 		[dev => "Software", [
 			[contributing => "Contributing"],
 			[cla => "CLA"],

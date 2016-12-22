@@ -1,16 +1,18 @@
 Home
 ====
 
-Xinutec is a chat network and associated group of people who sometimes do
-projects together, and which exists in the current form since approximately
-2006.
+Xinutec is an IRC based chat network and associated group of people who
+sometimes do projects together. It exists since approximately 2006.
 
-We're a group of people who are enthusiastic for computers and software related
-projects, but we also generally like creative ideas, science, social
-innovation, free software, talking to each other about our life and a lot more.
-If you're interested, even if you think you're none of these things I've just
-use to describe us, please check out our IRC network.
+Among our shared interests are computers and Free Software related projects, but we
+also generally like creative ideas, science, social innovation, talking to each
+other like friends normally do and a lot more.
+
+If you're interested, even if you think none of these things I've just used to
+describe us apply to you but we might get along anyway, feel free to check it out.
 
 If you're new to this whole IRC business, we recommend that you join using the
 [Webchat](https://qwebirc.xinutec.net/?channels=%23linux) and we'll just
 explain everything to you once you're there. Otherwise, [read on](irc/connect).
+
+We don't bite if it isn't consensual.
