@@ -1,7 +1,6 @@
-\#linux
--------
+# #linux
 
-\#linux is Xinutec's main channel.
+`#linux` is Xinutec's main channel.
 
 Users with any client certificate are voiced. The voice attribute doesn't do
 anything in most IRC networks, so it serves as a means to identify people who
