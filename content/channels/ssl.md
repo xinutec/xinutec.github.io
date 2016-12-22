@@ -54,7 +54,7 @@ Verifying that your certificate works
 -------------------------------------
 
 Assuming you already configured your IRC client to use the certificate
-according to the [client specific instructions](connect) and reconnected
+according to the [client specific instructions](../connect) and reconnected
 (because the certificate is only transmitted when a connection is made), you
 can `/whois` your own nick to verify if it worked. If you see something like
 this

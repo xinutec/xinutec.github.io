@@ -13,6 +13,6 @@ describe us apply to you but we might get along anyway, feel free to check it ou
 
 If you're new to this whole IRC business, we recommend that you join using the
 [Webchat](https://qwebirc.xinutec.net/?channels=%23linux) and we'll just
-explain everything to you once you're there. Otherwise, [read on](irc/connect).
+explain everything to you once you're there. Otherwise, [read on](connect).
 
 We don't bite if it isn't consensual.

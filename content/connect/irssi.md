@@ -6,9 +6,9 @@ command:
 
         /network add xinutec
 
-[SSL client certificates](../ssl) are our official way of registering channels
+[SSL client certificates](../channels/ssl) are our official way of registering channels
 and handling channel access control. Please read this article along with the
-[article on channel modes](../modes) before continuing with the irssi specific
+[article on channel modes](../channels/modes) before continuing with the irssi specific
 instructions if you're interested in being a channel operator. Otherwise,
 continue with the instructions on connecting without a client certificate.
 
