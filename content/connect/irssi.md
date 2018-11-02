@@ -5,24 +5,45 @@ First, add the Xinutec network to your configuration with the following
 command:
 
         /network add xinutec
-
-[SSL client certificates](../channels/ssl) are our official way of registering channels
-and handling channel access control. Please read this article along with the
-[article on channel modes](../channels/modes) before continuing with the irssi specific
-instructions if you're interested in being a channel operator. Otherwise,
-continue with the instructions on connecting without a client certificate.
-
-Without client certificate, enter this command, all on one line:
+        
+If you want to just connect to the network, enter the following command:
 
         /server add -ssl_verify -auto -network xinutec irc.xinutec.net 6697
 
-In case you do have a client certificate with associated private key, save
-them both in `~/.irssi/client.pem` by concatenating them with the following
-shell-command:
+This will add the server and connect to it automatically whenever irssi is
+started (because of `-auto`). In order to add the changes to your config file, you need to use
+
+        /save
+
+As the last step, you probably want to connect to the network:
+
+        /connect xinutec
+        
+All done!
+
+Here's an example of what the default configuration of irssi looks like:
+
+<asciinema-player src="asciinema/irssi.cast" theme="tango"></asciinema-player>
+
+
+Using a client certificate
+--------------------------
+
+This is only required if you want to register your channels because you're a
+channel operator.
+
+[SSL client certificates](../channels/ssl) are our official way of registering
+channels and handling channel access control. Please read this article along
+with the [article on channel modes](../channels/modes) before continuing with
+the irssi specific instructions below.
+
+Assuming you followed the instructions linked above, you now have a client
+certificate with associated private key, so save them both in
+`~/.irssi/client.pem` by concatenating them with the following shell-command:
 
 	cat key.pem cert.pem > ~/.irssi/client.pem
 
-and use the following irssi command, again all on one line:
+and use the following irssi command, all on one line:
 
         /server add -ssl_cert ~/.irssi/client.pem -ssl_verify
                     -auto -network xinutec irc.xinutec.net 6697
@@ -43,5 +64,5 @@ list:
           autoconnect = "yes";
         },
 
-If you don't want to use a client certificate, simply remove the line that
-starts with `ssl_cert`.
+If you later decide that you don't want to use a client certificate, simply
+remove the line that starts with `ssl_cert`.
